@@ -1,9 +1,4 @@
 {
-  "functions": {
-    "api/*.ts": {
-      "runtime": "nodejs20.x"
-    }
-  },
   "routes": [
     {
       "src": "/spreadsheets/d/([a-zA-Z0-9_-]+)/gviz/tq(.*)",
