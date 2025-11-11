@@ -2,8 +2,9 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
-  // Set header for CSV text output
-  res.setHeader("Content-Type", "text/csv; charset=utf-8");
+  // Set header để hiển thị text trực tiếp trên trình duyệt (không download)
+  res.setHeader("Content-Type", "text/plain; charset=utf-8");
+  res.setHeader("Content-Disposition", "inline");
   
   // CSV data - chỉ trả về text CSV
   const csvData = [
